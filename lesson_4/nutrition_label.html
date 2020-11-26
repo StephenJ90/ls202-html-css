@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MY FACTS</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      html {
+        box-sizing: border-box;
+        font-family: Helvetica Black, Helvetica, Arial, sans-serif;
+        font-size: 28px;
+      }
+
+      *, *::before, *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        border: 2px solid black;
+        height: 1340px;
+        width: 680px;
+        margin: 8px 8px;
+      }
+
+      /* Header */
+
+      header {
+        margin: 10px 15px 0 15px;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      header p {
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Main */
+
+      main {
+        width: 647px;
+        margin: 5px 15px 0;
+        padding: 0;
+      }
+
+      /* First Table */
+
+      table:first-child {
+        border-top: 30px solid black;
+        border-bottom: 15px solid black;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table:first-child td, table:first-child th {
+        border-top: 1px solid black;
+      }
+
+      table:first-child td {
+        padding: 2px 0 2px 7px;
+        margin: 0;
+      }
+
+      table:first-child th {
+        text-align: left;
+        width: 36px;
+      }
+
+      table:first-child th[colspan="3"] {
+        padding: 10px 0 11px 0;
+      }
+
+      table:first-child tbody th {
+        padding: 5px 0 6px;
+      }
+
+      /* Second Table */
+
+      table:nth-child(2) {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table:nth-child(2) thead [colspan="3"] {
+        padding-top:  11px;
+        text-align: right;
+      }
+
+      table:nth-child(2) th {
+        text-align: left;
+        border-bottom: 1px solid black;
+      }
+
+      table:nth-child(2) td {
+        border: 1px solid black;
+        border-right: hidden;
+        border-left: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nutrition Facts</h1>
+      <p>Serving Size 2/3 cup (55g)</p>
+      <p>Servings Per Container About 8</p>
+    </header>
+
+    <main>
+      
+      <!-- <div> -->
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Amount Per Serving</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Calories</th>
+            <td>230</td>
+            <td align="right">Calories from Fat 40</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- </div> -->
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">% Daily Value*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Total Fat</th>
+            <td>8g</td>
+            <td align="right"><b>12%</b></td>
+          </tr>
+
+          <tr>
+            <td>Saturated Fat 1g</td>
+            <td></td>
+            <td>5%</td>
+          </tr>
+
+          <tr>
+            <td colspan="3">Trans Fat 0g</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </main>
+  </body>
+</html>
+
+
+
+
+
+
