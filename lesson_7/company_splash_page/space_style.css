@@ -29,6 +29,7 @@ main {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 100px 90px 66px;
+  text-align: center;
   width: 1000px;
 }
 
@@ -39,19 +40,16 @@ article:first-child {
 h2 {
   font: 36px Avenir Heavy, Helvetica, sans-serif;
   padding: 0 0 22px 0;
-  text-align: center;
 }
 
 h3 {
   color: #2881a4;
   font: 22px Avenir Black, Helvetica, sans-serif;
   padding: 0 0 20px 0;
-  text-align: center;
 }
 
 p {
   line-height: 28px;
-  text-align: center;
 }
 
 footer {
