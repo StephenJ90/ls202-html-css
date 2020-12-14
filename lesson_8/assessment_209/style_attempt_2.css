@@ -1,0 +1,103 @@
+@import url("whitespace-reset.css");
+
+html {
+  box-sizing: border-box;
+  font: 16px Helvetica, Arial, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+main {
+  height: 100vh;
+  min-width: 200px;
+}
+
+nav {
+  background: #464f77;
+  width: 335px;
+  height: 100vh;
+  color: #ffffff;
+  position: fixed;
+  overflow: auto;
+}
+
+nav::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+/* Left Side Styles */
+
+ul {
+  width: 100%;
+  display: flex;
+  /*border: 1px solid yellow;*/
+  flex-flow: row wrap;
+  position: relative;
+  margin-bottom: 50px;
+  top: 66px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+ul li {
+  line-height: 40px;
+  font-size: 16px;
+  /*border: 1px solid black;*/
+  /*width: 33.33%;*/
+  opacity: .5;
+  position: relative;
+}
+
+nav ul .title {
+  font-size: 18px;
+  opacity: .8;
+}
+
+.active {
+  background: #383f5f;
+  opacity: .9;
+}
+
+span {
+  display: inline-block;
+  vertical-align: center;
+  height: 18px;
+}
+
+.circled {
+  background: black;
+  border-radius: 9px;
+  width: 24px;
+}
+
+
+.icon {
+  text-align: right;
+  padding: 5px 10px 0 0;
+  opacity: 1;
+}
+
+ul li {
+  width: 40%;
+}
+
+ul li:nth-child(3n) {
+  width: 20%;
+  text-align: right;
+  padding-right: 20px;
+}
+
+span {
+
+}
+
+.completed li:nth-child(n + 5) {
+  text-decoration: line-through;
+}

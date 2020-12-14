@@ -1,0 +1,327 @@
+@import url("whitespace-reset.css");
+
+html {
+  box-sizing: border-box;
+  font: 16px Helvetica, Arial, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+main {
+  height: 100%;
+  padding: 20px 0  0 335px;
+  /*min-width: 600px;*/
+  margin: 0 0 240px 0;
+}
+
+nav {
+  background: #464f77;
+  width: 335px;
+  height: 100vh;
+  color: #ffffff;
+  position: fixed;
+  overflow: auto;
+  padding: 0 0 220px 0;
+}
+
+#nav-toggle, #modal {
+  display: none; /* hide the checkbox */
+}
+
+#hamburger {
+  visibility: hidden;   /* hide the hamburger menu until browswer width is 768px or less */ 
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+nav::-webkit-scrollbar { 
+  display: none; 
+}
+
+td {
+  font-size: 15.5px;
+}
+
+.circle, .oval {
+  background-color: #6b7292;
+  /*padding-top: 1px;*/
+  border-radius: 50%;
+  width: 19px;
+  height: 19px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.circle {
+  padding-left: 1px;
+  padding-top: 1px;
+}
+
+.oval {
+  width: 25px;
+  border-radius: 10px;
+  opacity: 80%;
+  padding-top: 1px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#nav #all-todos {
+  margin: 64px 0 48px 0;
+}
+
+th, td {
+  height: 40px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+#all-todos thead tr {
+  height: 44px;
+}
+
+#all-todos th:first-child {
+  width: 38%;
+  text-align: right;
+}
+
+#all-todos th:nth-child(2) {
+  width: 42%;
+  font-size: 17.5px;    /* "All Todos" */
+  opacity: 90%;
+  padding-left: 11px;
+}
+
+#all-todos th:last-child {
+  width: 20%;
+  padding-left: 10px;
+}
+
+#all-todos td:first-child {
+  width: 38%;
+}
+
+#all-todos td:nth-child(2) {
+  width: 42%;
+  padding-left: 9px;
+}
+
+#all-todos td:last-child {
+  width: 20%;
+  padding-left: 16px;
+}
+
+#all-todos tbody td {
+  padding-top: 2px;
+}
+
+#all-todos tbody tr:nth-child(n+2) td:nth-of-type(2n) {
+  opacity: 60%; /* this affects the cirlce and the text, add <p> to only target text opacity */
+}
+
+#all-todos tbody tr:nth-child(n+2) p {
+  opacity: 80%;
+}
+
+.active {
+  background: #383f5f;
+}
+
+.blue {
+  background: #148fd5;
+}
+
+/* Second Nav table */
+
+
+#completed thead tr {
+  height: 44px;
+}
+
+#completed th:first-child {
+  width: 40%;
+  text-align: right;
+  padding-right: 6.5px;
+}
+
+#completed th:last-child {
+  width: 60%;
+  font-size: 17.5px;
+  padding-left: 4px;
+  padding-bottom: 3px;
+  opacity: 90%;
+}
+
+#completed td {
+  padding-left: 4px;
+  padding-top: 2px;
+  opacity: 50%;
+}
+
+/* Main Section / White page */
+
+main section {
+  padding: 20px 52px 0 20px;
+}
+
+main label {
+  padding-left: 30px;
+}
+
+main table th:first-child {
+  width: 5%;
+  padding-top: 6px;
+  letter-spacing: 0.2px;
+}
+
+main table th:nth-child(2) {
+  width: 90%;
+  text-align: left;
+  padding-bottom: 4px;
+  padding-top: 8px;
+  font-size: 15.5px;
+}
+
+main table th:last-child {
+  width: 5%;
+}
+
+main table td:first-child {
+  width: 5%;
+  padding-left: 12px;
+  padding-top: 4px;
+}
+
+main table td:nth-child(2) {
+  width: 90%;
+}
+
+main table td:last-child {
+  width: 5%;
+  text-align: right;
+}
+
+main table td {
+  border-top: 1px solid black;
+  border-color: rgb(0, 0, 0, 0.1)
+}
+
+main table th, main table td {
+  height: 49px;
+}
+
+#hamburger {
+  width: 22px;
+  height: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #148fd5;
+}
+
+main table thead th:nth-child(2) a {
+  color: #148fd5;
+}
+
+main h1 {
+  font-size: 20.5px;
+  font-weight: lighter;
+  display: inline-block;
+  margin: 11px 18px 22px 12px;
+  letter-spacing: 1.5px;
+}
+
+main section > p {
+  display: inline-block;
+  color: white;
+  position: relative;
+  bottom: 1px;
+  font-weight: lighter;
+}
+
+main section .strikethrough {
+  opacity: 50%;
+}
+
+/* Modal Styles */
+
+#modal_form {
+  display: none;
+}
+
+#modal:checked + #modal_form {
+  display: block;
+  position: relative;
+  bottom: 200px;
+  background: white;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+}
+
+#modal:checked {
+  background: blue;
+}
+
+label {
+  cursor: pointer;
+}
+
+#modal:checked + aside {
+  background: gray;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  bottom: 1px;
+  opacity: .2;
+}
+
+/* When screen shrinks */
+
+@media screen and (max-width: 768px) {
+  label {
+    cursor: pointer;
+  }
+
+  #hamburger {
+    visibility: visible;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #nav-toggle:checked + #nav {
+    display: block;
+  }
+
+  main {
+    height: 100%;
+    padding: 20px 0  0 0;
+  }
+
+  #nav-toggle:checked ~ main {
+    height: 100%;
+    padding: 20px 0  0 335px;
+  }
+
+}
+
+

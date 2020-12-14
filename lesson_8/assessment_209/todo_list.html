@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Todo List</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <input type="checkbox" name="nav-toggle" id="nav-toggle">
+    <nav id="nav">
+      <ul>
+        <li>
+          <table id="all-todos">
+            <thead>
+              <tr>
+                <th><img src="images/all-todos.png" alt="" /></th>
+                <th>All Todos</th>
+                <th>
+                  <p class="oval">18</p>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr class="active">
+                <td></td>
+                <td>02/16</td>
+                <td>
+                  <p class="circle blue">8</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>03/16</td>
+                <td>
+                  <p class="circle">2</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>04/16</td>
+                <td>
+                  <p class="circle">1</p>
+                </td>
+              </tr> 
+
+              <tr>
+                <td></td>
+                <td>05/16</td>
+                <td>
+                  <p class="circle">1</p>
+                </td>
+              </tr> 
+
+              <tr>
+                <td></td>
+                <td>06/16</td>
+                <td>
+                  <p class="circle">6</p>
+                </td>
+              </tr>           
+            </tbody>
+          </table>
+        </li>
+        <li>
+          <table id="completed">
+            <thead>
+              <tr>
+                <th><img src="images/done.png" alt="" /></th>
+                <th>Completed</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td></td>
+                <td class="strikethrough">02/15</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td class="strikethrough">03/15</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td class="strikethrough">04/15</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td class="strikethrough">05/15</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td class="strikethrough">06/14</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <label for="nav-toggle"><img id="hamburger" src="images/hamburger.png" alt=""></label>
+      <section>
+        <h1>02/16</h1><p class="circle blue">8</p>
+        <table>
+          <thead>
+            <tr>
+              <th><img src="images/plus.png" alt="" /></th>
+              <th><a href="#">Add new to do</a></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><img src="images/unticked-box.png" alt="unticked box"></td>
+              <td>
+                <label for="modal">Item 1</label>
+              </td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/unticked-box.png" alt="unticked box"></td>
+              <td><a href="#">Item 2</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/ticked-box.png" alt="ticked box"></td>
+              <td class="strikethrough"><a href="">Item 3</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/ticked-box.png" alt="ticked box"></td>
+              <td class="strikethrough"><a href="#">Item 4</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/ticked-box.png" alt="ticked box"></td>
+              <td class="strikethrough"><a href="#">Item 5</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/unticked-box.png" alt="unticked box"></td>
+              <td><a href="#">Item 6</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/unticked-box.png" alt="unticked box"></td>
+              <td><a href="#">Item 7</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/unticked-box.png" alt="unticked box"></td>
+              <td><a href="#">Item 8</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+
+            <tr>
+              <td><img src="images/unticked-box.png" alt="unticked box"></td>
+              <td><a href="#">Item 9</a></td>
+              <td><img src="images/trash.png" alt="trashcan"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <input type="checkbox" name="modal" id="modal" />
+
+      <aside>
+        <form id="modal_form">
+          <fieldset>
+            <dl>
+              <dt><label for="item_name">Title</label></dt>
+              <dd><input type="text" name="item_name" id="item_name" placeholder="Item 1" /></dd>
+            </dl>
+
+            <dl>
+              <dt><label>Due Date</label></dt>
+              <dd></dd>
+              <dd></dd>
+              <dd></dd>
+            </dl>
+
+            <dl>
+              <dt><label for="description">Description</label></dt>
+              <dd><textarea name="description" id="description" rows="6">Description</textarea></dd>
+            </dl>
+
+            <dl>
+              <dd><input type="submit" name="" value="Save" /></dd>
+              <dd><input type="submit" name="" value="
+                Mark As Complete" /></dd>
+            </dl>
+          </fieldset>
+        </form>
+      </aside>
+    </main>
+  </body>
+</html>
