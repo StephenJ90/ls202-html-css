@@ -15,10 +15,8 @@ html {
 }
 
 main {
-  height: 100%;
-  padding: 20px 0  0 335px;
-  /*min-width: 600px;*/
-  margin: 0 0 240px 0;
+  padding: 20px 0  240px 335px;
+  overflow: auto;
 }
 
 nav {
@@ -53,7 +51,6 @@ td {
 
 .circle, .oval {
   background-color: #6b7292;
-  /*padding-top: 1px;*/
   border-radius: 50%;
   width: 19px;
   height: 19px;
@@ -128,7 +125,7 @@ th, td {
 }
 
 #all-todos tbody tr:nth-child(n+2) td:nth-of-type(2n) {
-  opacity: 60%; /* this affects the cirlce and the text, add <p> to only target text opacity */
+  opacity: 60%;
 }
 
 #all-todos tbody tr:nth-child(n+2) p {
@@ -260,37 +257,116 @@ main section .strikethrough {
   opacity: 50%;
 }
 
+main table tbody tr:first-child label {
+  padding: 0;
+}
+
 /* Modal Styles */
 
 #modal_form {
   display: none;
 }
 
-#modal:checked + #modal_form {
+#modal:checked + aside {
   display: block;
-  position: relative;
-  bottom: 200px;
-  background: white;
   width: 100%;
-  height: 100%;
-  border: 2px solid black;
+  height: 100vh;
+  position: absolute;
+  padding: 115px 200px 200px 105px;
+  bottom: 1px;
+  background-color: #80808050;
 }
 
-#modal:checked {
-  background: blue;
+.styled-form * {
+  margin: 0;
+  padding: 0;
+}
+
+.styled-form fieldset {
+  background-color: white;
+  width: 65%;
+  height: 397px;
+  padding: 35px 40px 40px 30px;
+}
+
+.side-by-side dl {
+  padding: 0 0 20px 0;
+}
+
+.side-by-side dt,
+.side-by-side dd {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.side-by-side dd {
+  vertical-align: middle;
+}
+
+.side-by-side dt {
+  /*padding-right: 1rem;*/
+  width: 20%;
+}
+
+.side-by-side .text-field {
+  width: 75%;
+}
+
+.text-field input,
+.text-field textarea {
+  width: 100%;
+}
+
+.text-field input {
+  height: 35px;
+}
+
+.text-field textarea {
+  height: 145px;
+}
+
+.side-by-side .date dd:nth-child(n+3) {
+  padding: 0 8px;
+}
+
+.side-by-side .date dd:nth-child(even) {
+  width: 22%;
+}
+
+.side-by-side .date dd:nth-child(odd) {
+  width: 0%;
+}
+
+
+.side-by-side .date dd select {
+  height: 35px;
+  width: 100%;
+}
+
+.side-by-side .button input {
+  background-color: #148fd5;
+  height: 35px;
+  border-radius: 5px;
+  width: 165px;
+  color: white;
+  border-style: none;
+}
+
+.styled-form select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image:
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+");
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  padding-right: 1.5rem;
 }
 
 label {
   cursor: pointer;
-}
-
-#modal:checked + aside {
-  background: gray;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  bottom: 1px;
-  opacity: .2;
 }
 
 /* When screen shrinks */
@@ -323,5 +399,3 @@ label {
   }
 
 }
-
-
